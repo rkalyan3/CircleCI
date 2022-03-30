@@ -4,7 +4,6 @@ orbs:
 jobs:
   build_and_test: 
     steps:
-      - checkout
       - node/install-packages:
           pkg-manager: npm
       - run:
