@@ -6,6 +6,7 @@ jobs:
     docker:
       - image: cimg/node:17.2.0
     steps:
+      - checkout
       - node/install-packages:
           pkg-manager: npm
       - run:
@@ -18,3 +19,8 @@ jobs:
           root: ~/project
           paths:
             - .
+workflows:
+  test_my_app:
+    jobs:
+      - build_and_test
+
