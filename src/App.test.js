@@ -1,7 +1,10 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 import App from './App';
 
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 test('Test text rendering after button click', () => {
   render(<App />);
   const mockCallBack = jest.fn();
