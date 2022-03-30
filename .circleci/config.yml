@@ -9,7 +9,6 @@ jobs:
       - checkout
       - node/install-packages:
           pkg-manager: npm
-          command: npm install --save-dev eslint-plugin-react
       - run:
           command: npm run test
           name: Run tests
