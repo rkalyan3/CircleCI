@@ -1,8 +1,12 @@
-import { render, screen } from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+test('Test text rendering after button click', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const mockCallBack = jest.fn();
+  const button = screen.getByRole('button')
+
+  fireEvent.click(button);
+
+  expect(screen.getByText(/circleci-app/));
 });
